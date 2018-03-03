@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="3.1 - 掌握跟踪调试参数虚拟机提供了一些跟踪系统状态的参数，来跟踪系统的运行状态. 3.1.1 - 跟踪垃圾回收 - 读懂虚拟机日志如果垃圾回收出现频繁，或者占用较长的cpu时间，这时候就需要跟踪参数来进一步甄别垃圾回收的效率。  -XX:+PrintGC :  只要遇到gc, 就会打印日志，如下：1234[GC (System.gc())  7133K-&amp;gt;6648K(9728K), 0">
+<meta name="description" content="3.1 - 掌握跟踪调试参数虚拟机提供了一些跟踪系统状态的参数，来跟踪系统的运行状态. 3.1.1 - 跟踪垃圾回收 - 读懂虚拟机日志如果垃圾回收出现频繁，或者占用较长的cpu时间，这时候就需要跟踪参数来进一步甄别垃圾回收的效率。">
 <meta name="keywords" content="JVM,虚拟机">
 <meta property="og:type" content="article">
 <meta property="og:title" content="实战JVM-第三章:常用JVM参数">
 <meta property="og:url" content="http://yoursite.com/2018/03/04/java_jvm/szjvm_ch3_jvm_args/index.html">
-<meta property="og:site_name" content="may the Force be with you">
-<meta property="og:description" content="3.1 - 掌握跟踪调试参数虚拟机提供了一些跟踪系统状态的参数，来跟踪系统的运行状态. 3.1.1 - 跟踪垃圾回收 - 读懂虚拟机日志如果垃圾回收出现频繁，或者占用较长的cpu时间，这时候就需要跟踪参数来进一步甄别垃圾回收的效率。  -XX:+PrintGC :  只要遇到gc, 就会打印日志，如下：1234[GC (System.gc())  7133K-&amp;gt;6648K(9728K), 0">
+<meta property="og:site_name" content="may the force be with you">
+<meta property="og:description" content="3.1 - 掌握跟踪调试参数虚拟机提供了一些跟踪系统状态的参数，来跟踪系统的运行状态. 3.1.1 - 跟踪垃圾回收 - 读懂虚拟机日志如果垃圾回收出现频繁，或者占用较长的cpu时间，这时候就需要跟踪参数来进一步甄别垃圾回收的效率。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-03T18:37:24.006Z">
+<meta property="og:updated_time" content="2018-03-03T19:11:38.255Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="实战JVM-第三章:常用JVM参数">
-<meta name="twitter:description" content="3.1 - 掌握跟踪调试参数虚拟机提供了一些跟踪系统状态的参数，来跟踪系统的运行状态. 3.1.1 - 跟踪垃圾回收 - 读懂虚拟机日志如果垃圾回收出现频繁，或者占用较长的cpu时间，这时候就需要跟踪参数来进一步甄别垃圾回收的效率。  -XX:+PrintGC :  只要遇到gc, 就会打印日志，如下：1234[GC (System.gc())  7133K-&amp;gt;6648K(9728K), 0">
+<meta name="twitter:description" content="3.1 - 掌握跟踪调试参数虚拟机提供了一些跟踪系统状态的参数，来跟踪系统的运行状态. 3.1.1 - 跟踪垃圾回收 - 读懂虚拟机日志如果垃圾回收出现频繁，或者占用较长的cpu时间，这时候就需要跟踪参数来进一步甄别垃圾回收的效率。">
 
 
 
@@ -126,7 +126,7 @@
 
 
 
-  <title>实战JVM-第三章:常用JVM参数 | may the Force be with you</title>
+  <title>实战JVM-第三章:常用JVM参数 | may the force be with you</title>
   
 
 
@@ -156,7 +156,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">may the Force be with you</span>
+        <span class="site-title">may the force be with you</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -252,7 +252,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="may the Force be with you">
+      <meta itemprop="name" content="may the force be with you">
     </span>
 
     
@@ -272,7 +272,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-04T02:37:24+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-04T03:11:38+08:00">
                 2018-03-04
               </time>
             
@@ -334,6 +334,7 @@
       
         <h1 id="3-1-掌握跟踪调试参数"><a href="#3-1-掌握跟踪调试参数" class="headerlink" title="3.1 - 掌握跟踪调试参数"></a>3.1 - 掌握跟踪调试参数</h1><p>虚拟机提供了一些跟踪系统状态的参数，来跟踪系统的运行状态.</p>
 <h2 id="3-1-1-跟踪垃圾回收-读懂虚拟机日志"><a href="#3-1-1-跟踪垃圾回收-读懂虚拟机日志" class="headerlink" title="3.1.1 - 跟踪垃圾回收 - 读懂虚拟机日志"></a>3.1.1 - 跟踪垃圾回收 - 读懂虚拟机日志</h2><p>如果垃圾回收出现频繁，或者占用较长的cpu时间，这时候就需要跟踪参数来进一步甄别垃圾回收的效率。</p>
+<a id="more"></a>
 <ol>
 <li><em>-XX:+PrintGC</em> :  只要遇到gc, 就会打印日志，如下：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[GC (System.gc())  7133K-&gt;6648K(9728K), 0.0007631 secs]</span><br><span class="line">[Full GC (System.gc())  6648K-&gt;6526K(9728K), 0.0040049 secs]</span><br><span class="line">[GC (System.gc())  6567K-&gt;6558K(9728K), 0.0004225 secs]</span><br><span class="line">[Full GC (System.gc())  6558K-&gt;382K(9728K), 0.0062429 secs]</span><br></pre></td></tr></table></figure>
 </li>
@@ -594,10 +595,10 @@
               
               
               <div class="site-state-item site-state-categories">
-                
+                <a href="/categories/index.html">
                   <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">分类</span>
-                
+                </a>
               </div>
             
 
@@ -696,8 +697,6 @@
   <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a></div>
 
 
-
-  <div class="footer-custom">Hosted by <a target="_blank" href="https://github.com/jepacd">GitHub Pages</a></div>
 
 
         
