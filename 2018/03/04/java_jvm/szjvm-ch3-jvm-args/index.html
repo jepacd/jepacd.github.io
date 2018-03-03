@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="-JVM -虚拟机," />
 
 
 
@@ -79,13 +79,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="jepac tech blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="3.1 - 掌握跟踪调试参数虚拟机提供了一些跟踪系统状态的参数，来跟踪系统的运行状态。 3.1.1 - 跟踪垃圾回收 - 读懂虚拟机日志如果垃圾回收出现频繁，或者占用较长的cpu时间，这时候就需要跟踪参数来进一步甄别垃圾回收的效率。  -XX:+PrintGC :  只要遇到gc, 就会打印日志，如下：1234[GC (System.gc())  7133K-&amp;gt;6648K(9728K), 0">
+<meta name="keywords" content="-JVM -虚拟机">
+<meta property="og:type" content="article">
+<meta property="og:title" content="-实战JVM-第三章:常用JVM参数">
+<meta property="og:url" content="http://yoursite.com/2018/03/04/java_jvm/szjvm-ch3-jvm-args/index.html">
 <meta property="og:site_name" content="jepac tech blog">
+<meta property="og:description" content="3.1 - 掌握跟踪调试参数虚拟机提供了一些跟踪系统状态的参数，来跟踪系统的运行状态。 3.1.1 - 跟踪垃圾回收 - 读懂虚拟机日志如果垃圾回收出现频繁，或者占用较长的cpu时间，这时候就需要跟踪参数来进一步甄别垃圾回收的效率。  -XX:+PrintGC :  只要遇到gc, 就会打印日志，如下：1234[GC (System.gc())  7133K-&amp;gt;6648K(9728K), 0">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-03-03T17:22:43.252Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="jepac tech blog">
+<meta name="twitter:title" content="-实战JVM-第三章:常用JVM参数">
+<meta name="twitter:description" content="3.1 - 掌握跟踪调试参数虚拟机提供了一些跟踪系统状态的参数，来跟踪系统的运行状态。 3.1.1 - 跟踪垃圾回收 - 读懂虚拟机日志如果垃圾回收出现频繁，或者占用较长的cpu时间，这时候就需要跟踪参数来进一步甄别垃圾回收的效率。  -XX:+PrintGC :  只要遇到gc, 就会打印日志，如下：1234[GC (System.gc())  7133K-&amp;gt;6648K(9728K), 0">
 
 
 
@@ -115,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/03/04/java_jvm/szjvm-ch3-jvm-args/"/>
 
 
 
 
 
-  <title>jepac tech blog</title>
+  <title>-实战JVM-第三章:常用JVM参数 | jepac tech blog</title>
   
 
 
@@ -140,8 +145,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -214,9 +218,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -246,9 +250,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/03/04/java_jvm/szjvm-ch3-jvm-args/" itemprop="url">-实战JVM-第三章:常用JVM参数</a></h2>
+          <h2 class="post-title" itemprop="name headline">-实战JVM-第三章:常用JVM参数</h2>
         
 
         <div class="post-meta">
@@ -320,9 +322,7 @@
       
 
       
-        
-          
-            <h1 id="3-1-掌握跟踪调试参数"><a href="#3-1-掌握跟踪调试参数" class="headerlink" title="3.1 - 掌握跟踪调试参数"></a>3.1 - 掌握跟踪调试参数</h1><p>虚拟机提供了一些跟踪系统状态的参数，来跟踪系统的运行状态。</p>
+        <h1 id="3-1-掌握跟踪调试参数"><a href="#3-1-掌握跟踪调试参数" class="headerlink" title="3.1 - 掌握跟踪调试参数"></a>3.1 - 掌握跟踪调试参数</h1><p>虚拟机提供了一些跟踪系统状态的参数，来跟踪系统的运行状态。</p>
 <h2 id="3-1-1-跟踪垃圾回收-读懂虚拟机日志"><a href="#3-1-1-跟踪垃圾回收-读懂虚拟机日志" class="headerlink" title="3.1.1 - 跟踪垃圾回收 - 读懂虚拟机日志"></a>3.1.1 - 跟踪垃圾回收 - 读懂虚拟机日志</h2><p>如果垃圾回收出现频繁，或者占用较长的cpu时间，这时候就需要跟踪参数来进一步甄别垃圾回收的效率。</p>
 <ol>
 <li><em>-XX:+PrintGC</em> :  只要遇到gc, 就会打印日志，如下：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[GC (System.gc())  7133K-&gt;6648K(9728K), 0.0007631 secs]</span><br><span class="line">[Full GC (System.gc())  6648K-&gt;6526K(9728K), 0.0040049 secs]</span><br><span class="line">[GC (System.gc())  6567K-&gt;6558K(9728K), 0.0004225 secs]</span><br><span class="line">[Full GC (System.gc())  6558K-&gt;382K(9728K), 0.0062429 secs]</span><br></pre></td></tr></table></figure>
@@ -425,8 +425,6 @@
 </ol>
 <p>所以：<strong>直接内存适合申请次数少、访问频繁的场景</strong>。如果空间本来就申请频繁，就不再适合使用直接内存了。</p>
 
-          
-        
       
     </div>
     
@@ -441,301 +439,36 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/04/java_pattern/wapper/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="jepac">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="jepac tech blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/03/04/java_pattern/wapper/" itemprop="url">-设计模式之装饰者模式</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-04T00:53:46+08:00">
-                2018-03-04
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java设计模式/" itemprop="url" rel="index">
-                    <span itemprop="name">-Java设计模式</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
+            <a href="/tags/JVM-虚拟机/" rel="tag"># -JVM -虚拟机</a>
           
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="1-定义"><a href="#1-定义" class="headerlink" title="1 - 定义"></a>1 - 定义</h1><p>动态的将责任附加到对象上, 若要扩展功能, 装饰者提供了比继承更有弹性的替代方案.</p>
-<p><img src="https://static.oschina.net/uploads/img/201704/10201658_bqK6.png" alt="输入图片说明" title="在这里输入图片标题"></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Beverage</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function">String <span class="title">getDesc</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">double</span> <span class="title">cost</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DarkRoast</span> <span class="keyword">implements</span> <span class="title">Beverage</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getDesc</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"深焙咖啡"</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">cost</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">3.5</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Coffee</span> <span class="keyword">implements</span> <span class="title">Beverage</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getDesc</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"咖啡"</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">cost</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">2.5</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">BeverageCondimentWrapper</span> <span class="keyword">extends</span> <span class="title">Beverage</span></span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MilkCondiment</span> <span class="keyword">implements</span> <span class="title">BeverageCondimentWrapper</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> Beverage beverage;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">MilkCondiment</span><span class="params">(Beverage beverage)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.beverage = beverage;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getDesc</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> beverage.getDesc() + <span class="string">", 牛奶"</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">cost</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0.5</span> + beverage.cost();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MochaCondiment</span> <span class="keyword">implements</span> <span class="title">BeverageCondimentWrapper</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> Beverage beverage;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">MochaCondiment</span><span class="params">(Beverage beverage)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.beverage = beverage;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getDesc</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> beverage.getDesc() + <span class="string">", 摩卡"</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">cost</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1.5</span>d + beverage.cost();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SoybeanCondiment</span> <span class="keyword">implements</span> <span class="title">BeverageCondimentWrapper</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> Beverage beverage;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">SoybeanCondiment</span><span class="params">(Beverage beverage)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.beverage = beverage;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getDesc</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> beverage.getDesc() + <span class="string">", 豆浆"</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">cost</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1.5</span>d + beverage.cost();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">// 咖啡 2.5</span><br><span class="line">Coffee coffee = new Coffee();</span><br><span class="line">// 牛奶 0.5</span><br><span class="line">BeverageCondimentWrapper milkCondiment = new MilkCondiment(coffee);</span><br><span class="line">// 摩卡 1.5</span><br><span class="line">milkCondiment = new MochaCondiment(milkCondiment);</span><br><span class="line">System.out.println(milkCondiment.getDesc() + &quot; : &quot; + milkCondiment.cost());</span><br><span class="line"></span><br><span class="line">BeverageCondimentWrapper mocha = new MochaCondiment(new MilkCondiment(new Coffee()));</span><br><span class="line">System.out.println(mocha.getDesc() + &quot; : &quot; + mocha.cost());</span><br><span class="line"></span><br><span class="line">BeverageCondimentWrapper soyBean = new SoybeanCondiment(new MilkCondiment(new MochaCondiment(new DarkRoast())));</span><br><span class="line">System.out.println(soyBean.getDesc() + &quot; : &quot; + soyBean.cost());</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">咖啡, 牛奶, 摩卡 : 4.5</span><br><span class="line">咖啡, 牛奶, 摩卡 : 4.5</span><br><span class="line">深焙咖啡, 摩卡, 牛奶, 豆浆 : 7.0</span><br></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
       
 
       
       
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
       
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/03/db_nosql/redis/redis-sen/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="jepac">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="jepac tech blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/03/03/db_nosql/redis/redis-sen/" itemprop="url">-redis sen</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-03T22:56:27+08:00">
-                2018-03-03
-              </time>
+              <a href="/2018/03/04/java_pattern/wapper/" rel="next" title="-设计模式之装饰者模式">
+                <i class="fa fa-chevron-left"></i> -设计模式之装饰者模式
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/redis/" itemprop="url" rel="index">
-                    <span itemprop="name">-redis</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <h1 id="redis-sentinal"><a href="#redis-sentinal" class="headerlink" title="redis_sentinal"></a>redis_sentinal</h1>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -745,10 +478,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -756,6 +490,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -776,8 +514,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -853,6 +600,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#3-1-掌握跟踪调试参数"><span class="nav-number">1.</span> <span class="nav-text">3.1 - 掌握跟踪调试参数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-1-跟踪垃圾回收-读懂虚拟机日志"><span class="nav-number">1.1.</span> <span class="nav-text">3.1.1 - 跟踪垃圾回收 - 读懂虚拟机日志</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-2-类加载-卸载跟踪"><span class="nav-number">1.2.</span> <span class="nav-text">3.1.2 - 类加载/卸载跟踪</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-2-系统参数查看"><span class="nav-number">1.3.</span> <span class="nav-text">3.1.2 - 系统参数查看</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-2-让性能飞起来-学习堆的配置参数"><span class="nav-number">2.</span> <span class="nav-text">3.2 - 让性能飞起来 - 学习堆的配置参数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-1-最大堆和初始堆"><span class="nav-number">2.1.</span> <span class="nav-text">3.2.1 - 最大堆和初始堆</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-2-新生代配置"><span class="nav-number">2.2.</span> <span class="nav-text">3.2.2 - 新生代配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-3-堆溢出处理"><span class="nav-number">2.3.</span> <span class="nav-text">3.2.3 - 堆溢出处理</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-3-别让性能有缺口：了解非堆内存的配置"><span class="nav-number">3.</span> <span class="nav-text">3.3 - 别让性能有缺口：了解非堆内存的配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-3-1-方法区配置"><span class="nav-number">3.1.</span> <span class="nav-text">3.3.1 - 方法区配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-3-2-栈配置"><span class="nav-number">3.2.</span> <span class="nav-text">3.3.2 - 栈配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-3-3-直接内存配置"><span class="nav-number">3.3.</span> <span class="nav-text">3.3.3 - 直接内存配置</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -988,6 +751,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
