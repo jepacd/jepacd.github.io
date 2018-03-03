@@ -80,12 +80,12 @@
 
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="jepac tech blog">
+<meta property="og:title" content="tech blog">
 <meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="jepac tech blog">
+<meta property="og:site_name" content="tech blog">
 <meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="jepac tech blog">
+<meta name="twitter:title" content="tech blog">
 
 
 
@@ -95,7 +95,7 @@
     root: '/',
     scheme: 'Mist',
     version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -121,7 +121,7 @@
 
 
 
-  <title>jepac tech blog</title>
+  <title>tech blog</title>
   
 
 
@@ -152,7 +152,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">jepac tech blog</span>
+        <span class="site-title">tech blog</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -180,17 +180,21 @@
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
             首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+            分类
           </a>
         </li>
       
         
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
             归档
           </a>
@@ -229,7 +233,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/04/java_jvm/szjvm-ch3-jvm-args/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/04/encrypt/对称加密算法/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="jepac">
@@ -238,7 +242,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="jepac tech blog">
+      <meta itemprop="name" content="tech blog">
     </span>
 
     
@@ -248,7 +252,166 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/03/04/java_jvm/szjvm-ch3-jvm-args/" itemprop="url">-实战JVM-第三章:常用JVM参数</a></h2>
+                <a class="post-title-link" href="/2018/03/04/encrypt/对称加密算法/" itemprop="url">[object Object]</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-04T02:28:17+08:00">
+                2018-03-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java加解密/" itemprop="url" rel="index">
+                    <span itemprop="name">-Java加解密</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>对于大多数对称加密算法，解密算法是加密算法的逆运算。加密和解密的密钥相同。</p>
+<hr>
+<h1 id="1-数据加密标准–DES"><a href="#1-数据加密标准–DES" class="headerlink" title="1 - 数据加密标准–DES"></a>1 - 数据加密标准–DES</h1><p>DES和DESede统称DES系列算法。是对称加密算法领域中的典型算法。DESede算法是对DES算法的三重迭代，增加其算法安全性。</p>
+<p>DES算法密钥偏短，只有56位，迭代次数少，受到如查分密码分析和线性密码分析等各种攻击威胁。由于DES算法具有半公开性质。被怀疑是美国安全局安置的后门。</p>
+<p>但是，各种对称加密算法都是由DES算法发展而来。</p>
+<hr>
+<h2 id="1-1-模型分析"><a href="#1-1-模型分析" class="headerlink" title="1.1 - 模型分析"></a>1.1 - 模型分析</h2><p>下图是base64算法的信息交互图：<br><img src="https://static.oschina.net/uploads/img/201612/05174923_08tc.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>对于对称加密算法，模型并没有太大的变化。基于DES算法的模型如下如所示：<br><img src="https://static.oschina.net/uploads/img/201612/05175017_HTSr.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>两个时序图差别主要在于<code>密钥的使用</code>。base64算法没有密钥的概念。基于DES算法构建的消息模型大都按照上述模型构建。同时包括其他加密算法如DESede/AES/IDEA等。</p>
+<hr>
+<h2 id="1-2-实现"><a href="#1-2-实现" class="headerlink" title="1.2 - 实现"></a>1.2 - 实现</h2><p>密钥长度和安全性成正比。Java6只支持56为密钥长度。而bouncy castle提供64位密钥长度支持。在此基础上配合不同的填充方式。如PKCS5Padding, PKCS7Padding。</p>
+<p>密钥的构建主要通过<code>KeyGenetator</code>完成生成操作。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DESCoder</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String KEY_ALGORITHM = <span class="string">"DES"</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 加密解密算法/工作模式/填充方式</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="comment">//private static final String CIPHER_ALGORITHM = "DES/ECB/PKCS5Padding";</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String CIPHER_ALGORITHM = <span class="string">"DES/ECB/PKCS5Padding"</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> KeyGenerator kg;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 转换密钥</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> key 密钥</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> Key 密钥</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@throws</span> Exception</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> Key <span class="title">toKey</span><span class="params">(<span class="keyword">byte</span>[] key)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        <span class="comment">// 实例化DES密钥材料</span></span><br><span class="line">        DESKeySpec dks = <span class="keyword">new</span> DESKeySpec(key);</span><br><span class="line">        <span class="comment">// 实例化秘密密钥工厂</span></span><br><span class="line">        SecretKeyFactory skFact = SecretKeyFactory.getInstance(KEY_ALGORITHM);</span><br><span class="line">        <span class="comment">// 生成秘密密钥</span></span><br><span class="line">        <span class="keyword">return</span> skFact.generateSecret(dks);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> Key <span class="title">toKey2</span><span class="params">(<span class="keyword">byte</span>[] key)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        <span class="comment">// 实例化DES密钥材料</span></span><br><span class="line">        KeyGenerator keyGenerator = KeyGenerator.getInstance(KEY_ALGORITHM);</span><br><span class="line">        <span class="comment">// 实例化秘密密钥工厂</span></span><br><span class="line">        keyGenerator.init(<span class="number">56</span>, <span class="keyword">new</span> SecureRandom(key));</span><br><span class="line">        <span class="comment">// 生成秘密密钥</span></span><br><span class="line">        <span class="keyword">return</span> keyGenerator.generateKey();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 解密</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> data 待解密数据</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> key  密钥</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> byte[] 解密数据</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@throws</span> Exception</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">byte</span>[] decrypt(<span class="keyword">byte</span>[] data, <span class="keyword">byte</span>[] key) <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">        <span class="comment">// 还原密钥</span></span><br><span class="line">        Key k = toKey2(key);</span><br><span class="line">        <span class="comment">// 实例化</span></span><br><span class="line">        Cipher cipher = Cipher.getInstance(CIPHER_ALGORITHM);</span><br><span class="line">        <span class="comment">// 初始化 设置为解密模式</span></span><br><span class="line">        cipher.init(Cipher.DECRYPT_MODE, k);</span><br><span class="line">        <span class="keyword">return</span> cipher.doFinal(data);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 加密</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> data 待加密数据</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> key  密钥</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> byte[] 加密数据</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@throws</span> Exception</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">byte</span>[] encrypt(<span class="keyword">byte</span>[] data, <span class="keyword">byte</span>[] key) <span class="keyword">throws</span> Exception &#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">long</span> s = System.currentTimeMillis();</span><br><span class="line">        Key k = toKey(key);</span><br><span class="line">        <span class="keyword">long</span> e = System.currentTimeMillis();</span><br><span class="line">        System.out.println(<span class="string">"耗时: "</span> + (e - s));</span><br><span class="line">        Cipher cipher = Cipher.getInstance(CIPHER_ALGORITHM);</span><br><span class="line">        cipher.init(Cipher.ENCRYPT_MODE, k);</span><br><span class="line">        <span class="keyword">return</span> cipher.doFinal(data);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 生成密钥</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> byte[] 二进制密钥</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@throws</span> Exception</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">byte</span>[] initKey() <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">        <span class="keyword">if</span> (kg == <span class="keyword">null</span>) &#123;</span><br><span class="line">            kg = KeyGenerator.getInstance(KEY_ALGORITHM);</span><br><span class="line">            kg.init(<span class="number">56</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        SecretKey secretKey = kg.generateKey();</span><br><span class="line">        <span class="keyword">return</span> secretKey.getEncoded();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DESCoderTest</span> </span>&#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line"></span><br><span class="line">        String origData = <span class="string">"+86-17080032629"</span>;</span><br><span class="line">        System.out.println(<span class="string">"原文: \t"</span> + origData);</span><br><span class="line"></span><br><span class="line">        String binStr = hexString2binaryString(<span class="string">"49825150f26fcbfbad6e22f17a6d6a2f"</span>);</span><br><span class="line">        System.out.println(<span class="string">"十六进制转成二进制: "</span> + binStr);</span><br><span class="line">        System.out.println(<span class="string">"二进制长度: "</span> + binStr.length());</span><br><span class="line"></span><br><span class="line">        String s = byteToHexString(origData.getBytes());</span><br><span class="line">        System.out.println(s);</span><br><span class="line"></span><br><span class="line">        String s1 = hexString2binaryString(s);</span><br><span class="line">        binaryStringTrans(s1);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">            test(origData);</span><br><span class="line">            System.out.println();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">binaryStringTrans</span><span class="params">(String origBin)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> count = origBin.length() / <span class="number">8</span>;</span><br><span class="line">        List&lt;String&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; count; i++) &#123;</span><br><span class="line">            String sub = origBin.substring(i * <span class="number">8</span>, (i + <span class="number">1</span>) * <span class="number">8</span>);</span><br><span class="line">            list.add(sub);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">"sub: "</span> + list);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">byte</span>[] arr = <span class="keyword">new</span> <span class="keyword">byte</span>[list.size()];</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; list.size(); j++) &#123;</span><br><span class="line">            <span class="keyword">int</span> ten = Integer.parseInt(list.get(j), <span class="number">2</span>);</span><br><span class="line">            System.out.println(ten + <span class="string">": "</span> + (<span class="keyword">byte</span>) ten);</span><br><span class="line">            arr[j] = (<span class="keyword">byte</span>) ten;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">"得到的字符串: "</span> + <span class="keyword">new</span> String(arr, Charset.forName(<span class="string">"utf-8"</span>)));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">(String origData)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        <span class="keyword">byte</span>[] bytes = origData.getBytes();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 初始化密钥</span></span><br><span class="line">        <span class="comment">/*byte[] key = DESCoder.initKey();</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">        StringBuilder sb = new StringBuilder();</span></span><br><span class="line"><span class="comment">        for (byte b : key) &#123;</span></span><br><span class="line"><span class="comment">            sb.append(b).append(" ");</span></span><br><span class="line"><span class="comment">        &#125;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">        System.out.println("密钥: \t" + sb.toString());</span></span><br><span class="line"><span class="comment">        System.out.println("密钥: \t" + Base64.encodeBase64String(key));*/</span></span><br><span class="line"></span><br><span class="line">        String pwd = <span class="string">"eminem12"</span>;</span><br><span class="line">        <span class="comment">// 加密</span></span><br><span class="line">        <span class="comment">/*int mod = bytes.length % 8;</span></span><br><span class="line"><span class="comment">        if(mod != 0) &#123;</span></span><br><span class="line"><span class="comment">            bytes = Arrays.copyOf(bytes, bytes.length + 8 - mod);</span></span><br><span class="line"><span class="comment">        &#125;*/</span></span><br><span class="line">        <span class="keyword">byte</span>[] encrypt = DESCoder.encrypt(bytes, pwd.getBytes());</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">byte</span> b : encrypt) &#123;</span><br><span class="line">            System.out.print(b);</span><br><span class="line">            System.out.print(<span class="string">" "</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println();</span><br><span class="line">        System.out.println(<span class="string">"加密后(base64): \t"</span> + Base64.encodeBase64String(encrypt));</span><br><span class="line">        System.out.println(<span class="string">"加密后(16进制): \t"</span> + byteToHexString(encrypt));</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 解密</span></span><br><span class="line">        <span class="keyword">byte</span>[] decrypt = DESCoder.decrypt(encrypt, pwd.getBytes());</span><br><span class="line">        String outputStr = <span class="keyword">new</span> String(decrypt);</span><br><span class="line">        System.out.println(<span class="string">"解密后: \t"</span> + outputStr);</span><br><span class="line">        System.out.println(origData.equals(outputStr));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> String <span class="title">byteToHexString</span><span class="params">(<span class="keyword">byte</span>[] bytes)</span> </span>&#123;</span><br><span class="line">        StringBuilder sb = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">byte</span> b : bytes) &#123;</span><br><span class="line">            String hex = Integer.toHexString(b &amp; <span class="number">0xFF</span>);</span><br><span class="line">            <span class="keyword">if</span> (hex.length() == <span class="number">1</span>) &#123;</span><br><span class="line">                sb.append(<span class="string">"0"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            sb.append(hex);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> sb.toString();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> String <span class="title">hexString2binaryString</span><span class="params">(String hexString)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (hexString == <span class="keyword">null</span> || hexString.length() % <span class="number">2</span> != <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        String bString = <span class="string">""</span>, tmp;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; hexString.length(); i++)</span><br><span class="line">        &#123;</span><br><span class="line">            tmp = <span class="string">"0000"</span></span><br><span class="line">                    + Integer.toBinaryString(Integer.parseInt(hexString</span><br><span class="line">                    .substring(i, i + <span class="number">1</span>), <span class="number">16</span>));</span><br><span class="line">            bString += tmp.substring(tmp.length() - <span class="number">4</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> bString;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="2-高级数据加密AES"><a href="#2-高级数据加密AES" class="headerlink" title="2 - 高级数据加密AES"></a>2 - 高级数据加密AES</h1><p>通过对DES算法的简单改造，得到的DESede算法虽然在一定程度上提升了算法的安全强度。但其低效的加密实现和较慢的处理速度仍不能满足对安全的要求。AES算法正是基于这种缘由诞生。</p>
+<p>经过验证，AES算法能够有效的抵御已知的针对DES算法的所有攻击方法。如部分差分攻击，相关密钥攻击等。</p>
+<p>AES算法因<strong>密钥建立时间短、灵敏性好、内存需求低</strong>等优点，在各个领域得到广泛的研究。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AESTest</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line"></span><br><span class="line">        String data = <span class="string">"&lt;?xml version=\"1.0\" encoding=\"UTF-8\"?&gt;&lt;sent&gt;"</span> +</span><br><span class="line">                <span class="string">"&lt;key&gt;client_bind&lt;/key&gt;&lt;timestamp&gt;1481114078321&lt;/timestamp&gt;"</span> +</span><br><span class="line">                <span class="string">"&lt;data&gt;&lt;osVersion&gt;4.4.2&lt;/osVersion&gt;&lt;source&gt;1&lt;/source&gt;"</span> +</span><br><span class="line">                <span class="string">"&lt;appVersion&gt;4.5.1&lt;/appVersion&gt;&lt;device&gt;PE-TL20&lt;/device&gt;"</span> +</span><br><span class="line">                <span class="string">"&lt;account&gt;250316734119936&lt;/account&gt;&lt;channel&gt;android&lt;/channel&gt;"</span> +</span><br><span class="line">                <span class="string">"&lt;deviceId&gt;e60508c2d9793816854ca419ebfc48d9&lt;/deviceId&gt;&lt;/data&gt;&lt;/sent&gt;"</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">byte</span>[] orig = data.getBytes();</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">"原文: \t"</span> + data);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//byte[] keyByte = AESCoder.initKey();</span></span><br><span class="line">        String pwd = <span class="string">"eminem12eminem12"</span>;</span><br><span class="line">        <span class="keyword">byte</span>[] keyByte = pwd.getBytes();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment">//System.out.println("密钥(base64): \t" + Base64.encodeBase64String(keyByte));</span></span><br><span class="line">        System.out.println(<span class="string">"密钥(16进制): \t"</span> + byte2HexString(keyByte));</span><br><span class="line"></span><br><span class="line">        System.out.println();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">long</span> es = System.currentTimeMillis();</span><br><span class="line">        <span class="keyword">byte</span>[] encrypt = AESCoder.encrypt(orig, keyByte);</span><br><span class="line">        <span class="keyword">long</span> ee = System.currentTimeMillis();</span><br><span class="line"></span><br><span class="line">        <span class="comment">//System.out.println("加密后(base64): \t" + Base64.encodeBase64String(encrypt));</span></span><br><span class="line">        System.out.println(<span class="string">"加密后(16进制): \t"</span> + byte2HexString(encrypt));</span><br><span class="line"></span><br><span class="line">        System.out.println();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">long</span> ds = System.currentTimeMillis();</span><br><span class="line">        <span class="keyword">byte</span>[] decrypt = AESCoder.decrypt(encrypt, keyByte);</span><br><span class="line">        <span class="keyword">long</span> de = System.currentTimeMillis();</span><br><span class="line"></span><br><span class="line">        <span class="comment">//System.out.println("解密后(base64): \t" + Base64.encodeBase64String(decrypt));</span></span><br><span class="line">        System.out.println(<span class="string">"解密后(16进制): \t"</span> + byte2HexString(decrypt));</span><br><span class="line"></span><br><span class="line">        String str = <span class="keyword">new</span> String(decrypt);</span><br><span class="line">        System.out.println(<span class="string">"解密后(原文): \t"</span> + str);</span><br><span class="line">        System.out.println(str.equals(data));</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">"加密耗时: \t"</span> + (ee - es) + <span class="string">"; 解密耗时: \t"</span> + (de - ds));</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> String <span class="title">byte2HexString</span><span class="params">(<span class="keyword">byte</span>[] data)</span> </span>&#123;</span><br><span class="line">        StringBuilder sign = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">byte</span> b : data) &#123;</span><br><span class="line">            String hex = Integer.toHexString(b &amp; <span class="number">0xFF</span>);</span><br><span class="line">            <span class="keyword">if</span> (hex.length() &lt; <span class="number">2</span>) &#123;</span><br><span class="line">                sign.append(<span class="string">"0"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            sign.append(hex);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> sign.toString();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AESCoder</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 密钥算法</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String KEY_ALGORITHM = <span class="string">"AES"</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 加密解密算法</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String CIPHER_ALGORITHM = <span class="string">"AES/ECB/PKCS5Padding"</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> Key <span class="title">toKey</span><span class="params">(<span class="keyword">byte</span>[] key)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> SecretKeySpec(key, KEY_ALGORITHM);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">byte</span>[] encrypt(<span class="keyword">byte</span>[] data, <span class="keyword">byte</span>[] key) <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">        Key k = toKey(key);</span><br><span class="line">        Cipher cipher = Cipher.getInstance(CIPHER_ALGORITHM);</span><br><span class="line">        cipher.init(Cipher.ENCRYPT_MODE, k);</span><br><span class="line">        <span class="keyword">return</span> cipher.doFinal(data);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">byte</span>[] decrypt(<span class="keyword">byte</span>[] data, <span class="keyword">byte</span>[] key) <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">        Key k = toKey(key);</span><br><span class="line">        Cipher cipher = Cipher.getInstance(CIPHER_ALGORITHM);</span><br><span class="line">        cipher.init(Cipher.DECRYPT_MODE, k);</span><br><span class="line">        <span class="keyword">return</span> cipher.doFinal(data);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">byte</span>[] initKey() <span class="keyword">throws</span> NoSuchAlgorithmException &#123;</span><br><span class="line">        KeyGenerator generator = KeyGenerator.getInstance(KEY_ALGORITHM);</span><br><span class="line">        <span class="comment">// AES要求密钥长度为 128 192 256位</span></span><br><span class="line">        generator.init(<span class="number">128</span>);</span><br><span class="line">        <span class="comment">// 生成秘密密钥</span></span><br><span class="line">        SecretKey secretKey = generator.generateKey();</span><br><span class="line">        <span class="keyword">return</span> secretKey.getEncoded();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/04/java_jvm/szjvm_ch3_jvm_args/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="jepac">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="tech blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/03/04/java_jvm/szjvm_ch3_jvm_args/" itemprop="url">-实战JVM-第三章:常用JVM参数</a></h2>
         
 
         <div class="post-meta">
@@ -481,7 +644,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="jepac tech blog">
+      <meta itemprop="name" content="tech blog">
     </span>
 
     
@@ -627,7 +790,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="jepac tech blog">
+      <meta itemprop="name" content="tech blog">
     </span>
 
     
@@ -792,7 +955,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -803,7 +966,7 @@
               
               <div class="site-state-item site-state-categories">
                 
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">分类</span>
                 
               </div>
@@ -814,7 +977,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">标签</span>
                 
               </div>

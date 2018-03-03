@@ -83,8 +83,8 @@
 <meta name="keywords" content="-JVM -虚拟机">
 <meta property="og:type" content="article">
 <meta property="og:title" content="-实战JVM-第三章:常用JVM参数">
-<meta property="og:url" content="http://yoursite.com/2018/03/04/java_jvm/szjvm-ch3-jvm-args/index.html">
-<meta property="og:site_name" content="jepac tech blog">
+<meta property="og:url" content="http://yoursite.com/2018/03/04/java_jvm/szjvm_ch3_jvm_args/index.html">
+<meta property="og:site_name" content="tech blog">
 <meta property="og:description" content="3.1 - 掌握跟踪调试参数虚拟机提供了一些跟踪系统状态的参数，来跟踪系统的运行状态。 3.1.1 - 跟踪垃圾回收 - 读懂虚拟机日志如果垃圾回收出现频繁，或者占用较长的cpu时间，这时候就需要跟踪参数来进一步甄别垃圾回收的效率。  -XX:+PrintGC :  只要遇到gc, 就会打印日志，如下：1234[GC (System.gc())  7133K-&amp;gt;6648K(9728K), 0">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2018-03-03T17:22:43.252Z">
@@ -100,7 +100,7 @@
     root: '/',
     scheme: 'Mist',
     version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/03/04/java_jvm/szjvm-ch3-jvm-args/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/03/04/java_jvm/szjvm_ch3_jvm_args/"/>
 
 
 
 
 
-  <title>-实战JVM-第三章:常用JVM参数 | jepac tech blog</title>
+  <title>-实战JVM-第三章:常用JVM参数 | tech blog</title>
   
 
 
@@ -156,7 +156,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">jepac tech blog</span>
+        <span class="site-title">tech blog</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -184,17 +184,21 @@
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
             首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+            分类
           </a>
         </li>
       
         
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
             归档
           </a>
@@ -233,7 +237,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/04/java_jvm/szjvm-ch3-jvm-args/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/04/java_jvm/szjvm_ch3_jvm_args/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="jepac">
@@ -242,7 +246,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="jepac tech blog">
+      <meta itemprop="name" content="tech blog">
     </span>
 
     
@@ -434,6 +438,35 @@
     
 
     
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>您看着给点儿, 够吃早饭就行~</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/resources/icons/pay/wechat.jpg" alt="jepac 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/resources/icons/pay/alipay.jpg" alt="jepac 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
 
     
 
@@ -463,6 +496,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/03/04/encrypt/对称加密算法/" rel="prev" title="[object Object]">
+                [object Object] <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -539,7 +576,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -550,7 +587,7 @@
               
               <div class="site-state-item site-state-categories">
                 
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">分类</span>
                 
               </div>
@@ -561,7 +598,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">标签</span>
                 
               </div>
